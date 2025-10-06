@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JosiaSchule - Startseite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <ul class="navbar">
+      <li><a href="index.html">Startseite</a></li>
+      <li><a href="chat.html">Chats</a></li>
+      <li><a href="classes.html">Klassen</a></li>
+      <li><a href="teachers.html">Lehrer</a></li>
+      <li><a href="info.html">Information</a></li>
+    </ul>
+  </nav>
+
+  <main class="feed">
+    <h1>Beiträge</h1>
+
+    <div class="post">
+      <h3>Lisa • Klasse 8</h3>
+      <p>Heute war der Wandertag richtig cool!</p>
+      <button class="like">Gefällt mir ❤️</button>
+      <div class="comments">
+        <p><b>Ben:</b> Ja, das war super!</p>
+      </div>
+      <input type="text" placeholder="Kommentar schreiben..." />
+      <button>Posten</button>
+    </div>
+  </main>
+
+  <script>
+    // Kleine Beispiel-Interaktivität
+    const likeButtons = document.querySelectorAll('.like');
+    likeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.innerHTML = 'Gefällt mir ❤️ (' + (Math.floor(Math.random() * 20) + 1) + ')';
+      });
+    });
+  </script>
+</body>
+</html>
